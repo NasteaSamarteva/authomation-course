@@ -3,6 +3,9 @@ package dto;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @XStreamAlias("ValCurs")
 public class ValCurs {
 
@@ -13,6 +16,8 @@ public class ValCurs {
     @XStreamAlias("Name")
     @XStreamAsAttribute
     private String name;
+
+    private List<Valute> valutes = new ArrayList<>();
 
     public String getDate() {
         return date;
@@ -28,5 +33,13 @@ public class ValCurs {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Valute> getValutes() {
+        return valutes;
+    }
+
+    public void setValutes(List<Valute> valutes) {
+        this.valutes = valutes;
     }
 }
