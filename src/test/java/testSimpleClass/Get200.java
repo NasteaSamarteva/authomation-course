@@ -33,6 +33,7 @@ public class Get200 {
         };
     }
 
+
     @Test(dataProvider = "endPointsData")
     public void statusCodeTest(String endPoint) throws IOException {
 
@@ -42,8 +43,6 @@ public class Get200 {
 
         Assert.assertEquals(actualStatusCode, 200);
     }
-
-
 
 
 }

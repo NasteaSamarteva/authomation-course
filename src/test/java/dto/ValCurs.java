@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @XStreamAlias("ValCurs")
-public class ValCurs {
+public class ValCurs{
 
     @XStreamAlias("Date")
     @XStreamAsAttribute
@@ -42,4 +42,5 @@ public class ValCurs {
     public void setValutes(List<Valute> valutes) {
         this.valutes = valutes;
     }
+
 }

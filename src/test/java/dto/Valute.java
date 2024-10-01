@@ -4,7 +4,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
 
 @XStreamAlias("Valute")
-public class Valute {
+public class Valute implements Comparable<Valute>{
 
     @XStreamAlias("ID")
     @XStreamAsAttribute
@@ -72,4 +72,14 @@ public class Valute {
     public void setValue(Double value) {
         this.value = value;
     }
+
+    @Override
+        public int compareTo(Valute valute) {
+        if (this.getValue()>valute.getValue()){
+            return 1;
+        } else if (this.getValue()<valute.getValue()) {
+            return -1;
+        }else return 0;
+    }
+
 }
