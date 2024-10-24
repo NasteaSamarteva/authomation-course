@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class CheckResponseHeader {
+public class CheckResponseHeaderTest {
     CloseableHttpClient client;
 
     @BeforeMethod

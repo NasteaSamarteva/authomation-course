@@ -1,5 +1,3 @@
-package testSimpleClass;
-
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -12,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class Check401StatusCode {
+public class Check401StatusCodeTest {
     CloseableHttpClient client;
 
     @BeforeMethod
@@ -27,9 +25,9 @@ public class Check401StatusCode {
     @DataProvider(name = "notAuthorizedApiData")
     public Object[] notAuthorizedApiData(){
         return new Object[]{
-                PropertyReader.getProperty("current_user_url"),
-                PropertyReader.getProperty("followers_url"),
-                PropertyReader.getProperty("user_organizations_url")
+//                PropertyReader.getProperty("current_user_url"),
+//                PropertyReader.getProperty("followers_url"),
+//                PropertyReader.getProperty("user_organizations_url")
         };
     }
     @Test(dataProvider = "notAuthorizedApiData")

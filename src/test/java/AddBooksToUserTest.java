@@ -1,9 +1,9 @@
-package swaggerAuthomation;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
-import dtoSwagger.*;
+import dto.swagger.BooksResponse;
+import dto.swagger.CreateUserRequest;
+import dto.swagger.SwaggerUserResponse;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -14,7 +14,6 @@ import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import testSimpleClass.PropertyReader;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

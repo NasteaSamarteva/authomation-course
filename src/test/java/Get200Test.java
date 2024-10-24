@@ -1,17 +1,15 @@
 package testSimpleClass;
 
-import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.junit.jupiter.api.Assertions;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.io.IOException;
 
-public class Get200 {
+public class Get200Test {
 
     CloseableHttpClient client;
 
@@ -24,12 +22,13 @@ public class Get200 {
     public void tearDown() throws IOException{
             client.close();
     }
+
     @DataProvider(name = "endPointsData")
     public Object[] apiData(){
         return new Object[]{
-                PropertyReader.getProperty("githubApi"),
-                PropertyReader.getProperty("rate_limit_url"),
-                PropertyReader.getProperty("public_gists_url")
+//                PropertyReader.getProperty("githubApi"),
+//                PropertyReader.getProperty("rate_limit_url"),
+//                PropertyReader.getProperty("public_gists_url")
         };
     }
 

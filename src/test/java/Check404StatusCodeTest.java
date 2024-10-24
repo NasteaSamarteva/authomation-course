@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class Check404StatusCode {
+public class Check404StatusCodeTest {
     CloseableHttpClient client;
 
     @BeforeMethod
@@ -30,5 +30,6 @@ public class Check404StatusCode {
         HttpResponse response = client.execute(request);
 
         Assert.assertEquals(response.getStatusLine().getStatusCode(), 404);
+        Assert.assertEquals(response.getStatusLine().getStatusCode(), 401);
     }
 }
